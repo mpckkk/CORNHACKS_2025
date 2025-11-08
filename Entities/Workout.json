@@ -1,0 +1,73 @@
+{
+  "name": "Workout",
+  "type": "object",
+  "properties": {
+    "quest_name": {
+      "type": "string",
+      "description": "Name of the workout quest"
+    },
+    "quest_type": {
+      "type": "string",
+      "enum": [
+        "strength",
+        "cardio",
+        "flexibility",
+        "endurance",
+        "mixed"
+      ],
+      "description": "Type of workout"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced",
+        "legendary"
+      ],
+      "description": "Difficulty level"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "description": "Workout duration in minutes"
+    },
+    "xp_earned": {
+      "type": "number",
+      "description": "Experience points earned"
+    },
+    "exercises_completed": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "sets": {
+            "type": "number"
+          },
+          "reps": {
+            "type": "number"
+          },
+          "completed": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "quest_name",
+    "quest_type",
+    "difficulty",
+    "duration_minutes",
+    "xp_earned"
+  ]
+}

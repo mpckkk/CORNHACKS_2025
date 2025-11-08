@@ -1,0 +1,50 @@
+{
+  "name": "Achievement",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Achievement title"
+    },
+    "description": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Icon name from lucide-react"
+    },
+    "badge_color": {
+      "type": "string",
+      "description": "Badge color class"
+    },
+    "requirement": {
+      "type": "string",
+      "description": "What's needed to unlock"
+    },
+    "unlocked_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "is_unlocked": {
+      "type": "boolean",
+      "default": false
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "workouts",
+        "streaks",
+        "difficulty",
+        "time",
+        "social",
+        "special"
+      ]
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "icon",
+    "category"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "WaterLog",
+  "type": "object",
+  "properties": {
+    "amount_ml": {
+      "type": "number",
+      "description": "Amount of water in milliliters"
+    },
+    "log_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of water intake"
+    },
+    "log_time": {
+      "type": "string",
+      "description": "Time of water intake"
+    }
+  },
+  "required": [
+    "amount_ml",
+    "log_date"
+  ]
+}

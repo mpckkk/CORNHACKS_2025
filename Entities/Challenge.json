@@ -1,0 +1,73 @@
+{
+  "name": "Challenge",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Challenge name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Challenge description"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "strength",
+        "cardio",
+        "flexibility",
+        "endurance",
+        "mixed"
+      ]
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced",
+        "legendary"
+      ]
+    },
+    "xp_reward": {
+      "type": "number",
+      "description": "XP awarded on completion"
+    },
+    "duration_minutes": {
+      "type": "number"
+    },
+    "exercises": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "sets": {
+            "type": "number"
+          },
+          "reps": {
+            "type": "number"
+          },
+          "rest_seconds": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "type",
+    "difficulty",
+    "xp_reward",
+    "duration_minutes"
+ 

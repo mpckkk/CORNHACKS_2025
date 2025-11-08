@@ -1,0 +1,50 @@
+{
+  "name": "Meal",
+  "type": "object",
+  "properties": {
+    "meal_type": {
+      "type": "string",
+      "enum": [
+        "breakfast",
+        "lunch",
+        "dinner",
+        "snack"
+      ],
+      "description": "Type of meal"
+    },
+    "meal_name": {
+      "type": "string",
+      "description": "Name or description of the meal"
+    },
+    "calories": {
+      "type": "number",
+      "description": "Estimated calories"
+    },
+    "protein": {
+      "type": "number",
+      "description": "Protein in grams"
+    },
+    "carbs": {
+      "type": "number",
+      "description": "Carbohydrates in grams"
+    },
+    "fats": {
+      "type": "number",
+      "description": "Fats in grams"
+    },
+    "meal_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the meal"
+    },
+    "meal_time": {
+      "type": "string",
+      "description": "Time of the meal"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes about the meal"
+    },
+    "image_url": {
+      "type": "string",
+ 
